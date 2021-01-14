@@ -15,6 +15,8 @@
 		CF0D3ED525AFA3960089949D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF0D3ED325AFA3960089949D /* LaunchScreen.storyboard */; };
 		CF0D3EE025AFA3960089949D /* promobitTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3EDF25AFA3960089949D /* promobitTestTests.swift */; };
 		CF0D3EEB25AFA3960089949D /* promobitTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3EEA25AFA3960089949D /* promobitTestUITests.swift */; };
+		CF0D3F0625AFDA580089949D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3F0525AFDA580089949D /* UIColorExtension.swift */; };
+		CF0D3F1A25AFE0230089949D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3F1925AFE0230089949D /* RoundButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		CF0D3EE625AFA3960089949D /* promobitTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = promobitTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF0D3EEA25AFA3960089949D /* promobitTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = promobitTestUITests.swift; sourceTree = "<group>"; };
 		CF0D3EEC25AFA3960089949D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF0D3F0525AFDA580089949D /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		CF0D3F1925AFE0230089949D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		CF0D3EC725AFA3920089949D /* promobitTest */ = {
 			isa = PBXGroup;
 			children = (
+				CF0D3F1825AFDFF60089949D /* customComponents */,
+				CF0D3F0425AFDA3E0089949D /* extensions */,
 				CF0D3EC825AFA3920089949D /* AppDelegate.swift */,
 				CF0D3ECA25AFA3920089949D /* SceneDelegate.swift */,
 				CF0D3ECC25AFA3920089949D /* ViewController.swift */,
@@ -126,6 +132,22 @@
 				CF0D3EEC25AFA3960089949D /* Info.plist */,
 			);
 			path = promobitTestUITests;
+			sourceTree = "<group>";
+		};
+		CF0D3F0425AFDA3E0089949D /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CF0D3F0525AFDA580089949D /* UIColorExtension.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		CF0D3F1825AFDFF60089949D /* customComponents */ = {
+			isa = PBXGroup;
+			children = (
+				CF0D3F1925AFE0230089949D /* RoundButton.swift */,
+			);
+			path = customComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +283,8 @@
 				CF0D3ECD25AFA3920089949D /* ViewController.swift in Sources */,
 				CF0D3EC925AFA3920089949D /* AppDelegate.swift in Sources */,
 				CF0D3ECB25AFA3920089949D /* SceneDelegate.swift in Sources */,
+				CF0D3F0625AFDA580089949D /* UIColorExtension.swift in Sources */,
+				CF0D3F1A25AFE0230089949D /* RoundButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BRDS8JTBGH;
 				INFOPLIST_FILE = promobitTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,7 +471,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.gtechconsulting.promobitTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -458,6 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BRDS8JTBGH;
 				INFOPLIST_FILE = promobitTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +491,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.gtechconsulting.promobitTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
