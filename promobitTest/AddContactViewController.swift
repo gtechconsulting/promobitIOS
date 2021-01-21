@@ -11,6 +11,7 @@ import UIKit
 class AddContactViewController: UIViewController {
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var saveContactBtn: UIButton!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var notaField: CustomTextField!
     @IBOutlet weak var siteField: CustomTextField!
     @IBOutlet weak var phoneField: CustomTextField!
@@ -22,6 +23,7 @@ class AddContactViewController: UIViewController {
         super.viewDidLoad()
         
         emailErrorField.isHidden = true
+        spinner.isHidden = true
         
         cancelBtn.addTarget(self, action: #selector(btnCancelClicked), for: .touchUpInside)
         saveContactBtn.addTarget(self, action: #selector(btnSaveContactClicked), for: .touchUpInside)
@@ -42,10 +44,8 @@ class AddContactViewController: UIViewController {
     @objc func btnSaveContactClicked() {
         
         if(isValidEmail(email: emailField.text ?? "")){
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let successVC = storyBoard.instantiateViewController(withIdentifier: "SuccessViewController") as! SuccessViewController
-
-            self.navigationController?.pushViewController(successVC, animated: true)
+            spinner.isHidden = false
+            self.salvarContato()
         }else {
             emailErrorField.isHidden = false
         }
@@ -57,6 +57,56 @@ class AddContactViewController: UIViewController {
 
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: email)
+    }
+    
+    func salvarContato() {
+        let url = URL(string: "https://5ff85fad10778b0017043359.mockapi.io/api/contatos")
+        guard let requestUrl = url else { fatalError() }
+
+        var request = URLRequest(url: requestUrl)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        struct NewContact: Codable {
+            var name: String
+            var company: String
+            var email: String
+            var website: String
+            var custom_note: String
+        }
+        
+        let newContat = NewContact(name: nomeField.text ?? "", company: empresaField.text ?? "", email: emailField.text ?? "", website: siteField.text ?? "", custom_note: notaField.text ?? "")
+    
+        do {
+          let jsonData = try JSONEncoder().encode(newContat)
+            
+            request.httpBody = jsonData
+
+            let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                DispatchQueue.main.async {
+                    self.spinner.isHidden = true
+                }
+                
+                    if let error = error {
+                        print("Error took place \(error)")
+                        return
+                    }
+             
+                    if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                        
+                        DispatchQueue.main.async {
+                            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                            let successVC = storyBoard.instantiateViewController(withIdentifier: "SuccessViewController") as! SuccessViewController
+
+                            self.navigationController?.pushViewController(successVC, animated: true)
+                        }
+                    }
+            }
+            task.resume()
+        }catch {
+            print("erro")
+        }
     }
 
 }

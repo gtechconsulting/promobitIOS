@@ -11,8 +11,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var btnAddContact: RoundButton!
     @IBOutlet weak var contactTable: UITableView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var noContactsView: UIView!
-    @IBOutlet weak var spinnerView: SpinnerView!
     var contacts = [Contact]()
     
     override func viewDidLoad() {
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 
         self.contactTable.isHidden = true
         self.noContactsView.isHidden = true
-        self.spinnerView.isHidden = true
+        self.spinner.isHidden = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     }
     
     private func loadContacts() {
-        self.spinnerView.isHidden = false
+        self.spinner.isHidden = false
         let url = URL(string: "https://5ff85fad10778b0017043359.mockapi.io/api/contatos")
         guard let requestUrl = url else { fatalError() }
 
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
                                 }
                             }
                             DispatchQueue.main.async {
-                                self.spinnerView.isHidden = true
+                                self.spinner.isHidden = true
                                 self.contactTable.reloadData()
                             }
                         } catch {
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
                     DispatchQueue.main.async {
                         self.noContactsView.isHidden = false
                         self.contactTable.isHidden = true
-                        self.spinnerView.isHidden = true
+                        self.spinner.isHidden = true
                     }
                 }
             }
