@@ -159,18 +159,157 @@
         <!--Adicionar contato-->
         <scene sceneID="hfp-fg-0nx">
             <objects>
-                <viewController id="Znt-5c-0QW" sceneMemberID="viewController">
+                <viewController id="Znt-5c-0QW" customClass="AddContactViewController" customModule="promobitTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cFp-r9-CYI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome e sobrenome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o4g-uh-4GU" customClass="CustomTextField" customModule="promobitTest" customModuleProvider="target">
+                                <rect key="frame" x="20" y="93" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="o4g-uh-4GU" secondAttribute="height" multiplier="11:1" id="2QQ-C0-V7B"/>
+                                    <constraint firstAttribute="height" constant="34" id="7Jm-UV-xz1"/>
+                                    <constraint firstAttribute="width" constant="374" id="LEO-Vp-QBe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Empresa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nS1-SA-obB" customClass="CustomTextField" customModule="promobitTest" customModuleProvider="target">
+                                <rect key="frame" x="20" y="157" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nS1-SA-obB" secondAttribute="height" multiplier="11:1" id="QGK-bD-HGw"/>
+                                    <constraint firstAttribute="height" constant="34" id="kww-Ck-DsN"/>
+                                    <constraint firstAttribute="width" constant="374" id="lce-D1-uXC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7dn-T9-q0B" customClass="CustomTextField" customModule="promobitTest" customModuleProvider="target">
+                                <rect key="frame" x="20" y="221" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7dn-T9-q0B" secondAttribute="height" multiplier="11:1" id="OmZ-iz-VRR"/>
+                                    <constraint firstAttribute="width" constant="374" id="QAk-17-bag"/>
+                                    <constraint firstAttribute="height" constant="34" id="okS-Hm-5yH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8G-TC-evQ" customClass="CustomTextField" customModule="promobitTest" customModuleProvider="target">
+                                <rect key="frame" x="20" y="285" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="9C6-Za-6Yr"/>
+                                    <constraint firstAttribute="height" constant="34" id="Pzw-gE-1cH"/>
+                                    <constraint firstAttribute="width" secondItem="N8G-TC-evQ" secondAttribute="height" multiplier="11:1" id="sF3-D1-NZd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Site" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="34D-zJ-655" customClass="CustomTextField" customModule="promobitTest" customModuleProvider="target">
+                                <rect key="frame" x="20" y="349" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="34D-zJ-655" secondAttribute="height" multiplier="11:1" id="KlD-q9-Fmq"/>
+                                    <constraint firstAttribute="width" constant="374" id="QnP-Ne-AMT"/>
+                                    <constraint firstAttribute="height" constant="34" id="ZBx-16-ceO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adicionar nota" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AcY-8t-pRN" customClass="CustomTextField" customModule="promobitTest" customModuleProvider="target">
+                                <rect key="frame" x="20" y="413" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="2k2-6W-C1y"/>
+                                    <constraint firstAttribute="width" secondItem="AcY-8t-pRN" secondAttribute="height" multiplier="11:1" id="5Qs-iY-6bq"/>
+                                    <constraint firstAttribute="width" constant="374" id="Hxm-jL-I5n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYO-gB-ZHg">
+                                <rect key="frame" x="20" y="686" width="147" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pYO-gB-ZHg" secondAttribute="height" multiplier="49:10" id="UxK-2R-1gn"/>
+                                    <constraint firstAttribute="height" constant="30" id="kMm-nA-8Np"/>
+                                    <constraint firstAttribute="width" constant="147" id="ojQ-C5-AKk"/>
+                                </constraints>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" red="0.0" green="0.72941176470588232" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0j-hL-5ly">
+                                <rect key="frame" x="247" y="686" width="147" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="M0j-hL-5ly" secondAttribute="height" multiplier="49:10" id="XH9-Nk-dCP"/>
+                                    <constraint firstAttribute="width" constant="147" id="YLy-k5-l3I"/>
+                                    <constraint firstAttribute="height" constant="30" id="ZdE-WS-f3a"/>
+                                </constraints>
+                                <state key="normal" title="Salvar"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="GvT-ZB-aF5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AcY-8t-pRN" firstAttribute="leading" secondItem="GvT-ZB-aF5" secondAttribute="leading" constant="20" id="2bV-sP-7Sa"/>
+                            <constraint firstItem="GvT-ZB-aF5" firstAttribute="trailing" secondItem="7dn-T9-q0B" secondAttribute="trailing" constant="20" id="3zy-FD-Zie"/>
+                            <constraint firstItem="nS1-SA-obB" firstAttribute="top" secondItem="o4g-uh-4GU" secondAttribute="bottom" constant="30" id="8lG-RR-xNJ"/>
+                            <constraint firstItem="AcY-8t-pRN" firstAttribute="top" secondItem="34D-zJ-655" secondAttribute="bottom" constant="30" id="BYp-RA-1mb"/>
+                            <constraint firstItem="N8G-TC-evQ" firstAttribute="top" secondItem="7dn-T9-q0B" secondAttribute="bottom" constant="30" id="CWF-Xw-hK8"/>
+                            <constraint firstItem="GvT-ZB-aF5" firstAttribute="trailing" secondItem="N8G-TC-evQ" secondAttribute="trailing" constant="20" id="FjL-1T-Ipt"/>
+                            <constraint firstItem="34D-zJ-655" firstAttribute="leading" secondItem="GvT-ZB-aF5" secondAttribute="leading" constant="20" id="Jtw-d6-SHr"/>
+                            <constraint firstItem="pYO-gB-ZHg" firstAttribute="leading" secondItem="GvT-ZB-aF5" secondAttribute="leading" constant="20" id="NlU-Qg-zbh"/>
+                            <constraint firstItem="7dn-T9-q0B" firstAttribute="leading" secondItem="GvT-ZB-aF5" secondAttribute="leading" constant="20" id="PWg-dC-2Lp"/>
+                            <constraint firstItem="7dn-T9-q0B" firstAttribute="top" secondItem="nS1-SA-obB" secondAttribute="bottom" constant="30" id="PdG-lI-Nrj"/>
+                            <constraint firstItem="o4g-uh-4GU" firstAttribute="top" secondItem="GvT-ZB-aF5" secondAttribute="top" constant="49" id="Yoh-kY-bhs"/>
+                            <constraint firstItem="nS1-SA-obB" firstAttribute="leading" secondItem="GvT-ZB-aF5" secondAttribute="leading" constant="20" id="ZG2-5M-7KH"/>
+                            <constraint firstItem="o4g-uh-4GU" firstAttribute="leading" secondItem="GvT-ZB-aF5" secondAttribute="leading" constant="20" id="ZTZ-uh-DVi"/>
+                            <constraint firstItem="GvT-ZB-aF5" firstAttribute="trailing" secondItem="M0j-hL-5ly" secondAttribute="trailing" constant="20" id="bQP-jI-Bql"/>
+                            <constraint firstItem="34D-zJ-655" firstAttribute="top" secondItem="N8G-TC-evQ" secondAttribute="bottom" constant="30" id="cbS-jq-UA1"/>
+                            <constraint firstItem="N8G-TC-evQ" firstAttribute="leading" secondItem="GvT-ZB-aF5" secondAttribute="leading" constant="20" id="e4j-sJ-Vbr"/>
+                            <constraint firstItem="GvT-ZB-aF5" firstAttribute="bottom" secondItem="pYO-gB-ZHg" secondAttribute="bottom" constant="20" id="eWP-ym-5i9"/>
+                            <constraint firstItem="GvT-ZB-aF5" firstAttribute="trailing" secondItem="o4g-uh-4GU" secondAttribute="trailing" constant="20" id="meh-0B-S12"/>
+                            <constraint firstItem="GvT-ZB-aF5" firstAttribute="trailing" secondItem="34D-zJ-655" secondAttribute="trailing" constant="20" id="oIN-YE-yRV"/>
+                            <constraint firstItem="GvT-ZB-aF5" firstAttribute="trailing" secondItem="nS1-SA-obB" secondAttribute="trailing" constant="20" id="pQm-cA-9VL"/>
+                            <constraint firstItem="GvT-ZB-aF5" firstAttribute="trailing" secondItem="AcY-8t-pRN" secondAttribute="trailing" constant="20" id="rcP-RF-8PY"/>
+                            <constraint firstItem="GvT-ZB-aF5" firstAttribute="bottom" secondItem="M0j-hL-5ly" secondAttribute="bottom" constant="20" id="tCE-TW-6Ml"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Adicionar contato" id="t6h-2J-6Uh"/>
+                    <connections>
+                        <outlet property="cancelBtn" destination="pYO-gB-ZHg" id="cgK-eA-Vfo"/>
+                        <outlet property="emailField" destination="7dn-T9-q0B" id="nr2-zB-cA6"/>
+                        <outlet property="empresaField" destination="nS1-SA-obB" id="JHO-iY-uJx"/>
+                        <outlet property="nomeField" destination="o4g-uh-4GU" id="11m-6D-Hyh"/>
+                        <outlet property="notaField" destination="AcY-8t-pRN" id="eOa-4P-VWQ"/>
+                        <outlet property="phoneField" destination="N8G-TC-evQ" id="dUz-OD-GEW"/>
+                        <outlet property="saveContactBtn" destination="M0j-hL-5ly" id="qUY-7N-ycS"/>
+                        <outlet property="siteField" destination="34D-zJ-655" id="7dd-VQ-604"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajU-48-0xA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1860" y="111"/>
+            <point key="canvasLocation" x="1859.4202898550725" y="110.86956521739131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QXp-DQ-Sef">
