@@ -17,6 +17,12 @@
 		CF0D3EEB25AFA3960089949D /* promobitTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3EEA25AFA3960089949D /* promobitTestUITests.swift */; };
 		CF0D3F0625AFDA580089949D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3F0525AFDA580089949D /* UIColorExtension.swift */; };
 		CF0D3F1A25AFE0230089949D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3F1925AFE0230089949D /* RoundButton.swift */; };
+		CF1A116525B85E91004D1965 /* ViewControllerTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A116425B85E91004D1965 /* ViewControllerTableExtension.swift */; };
+		CF1A116A25B85FA1004D1965 /* ViewControllerTableDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A116925B85FA1004D1965 /* ViewControllerTableDelegateExtension.swift */; };
+		CF1A116F25B86685004D1965 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A116E25B86685004D1965 /* ContactCell.swift */; };
+		CF1A118925B98476004D1965 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A118825B98476004D1965 /* Contact.swift */; };
+		CF1A118E25B98693004D1965 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A118D25B98693004D1965 /* ImageViewExtension.swift */; };
+		CF1A119B25B99802004D1965 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A119A25B99802004D1965 /* Spinner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,12 @@
 		CF0D3EEC25AFA3960089949D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF0D3F0525AFDA580089949D /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		CF0D3F1925AFE0230089949D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		CF1A116425B85E91004D1965 /* ViewControllerTableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableExtension.swift; sourceTree = "<group>"; };
+		CF1A116925B85FA1004D1965 /* ViewControllerTableDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableDelegateExtension.swift; sourceTree = "<group>"; };
+		CF1A116E25B86685004D1965 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		CF1A118825B98476004D1965 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		CF1A118D25B98693004D1965 /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
+		CF1A119A25B99802004D1965 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +115,7 @@
 		CF0D3EC725AFA3920089949D /* promobitTest */ = {
 			isa = PBXGroup;
 			children = (
+				CF1A118725B9846A004D1965 /* model */,
 				CF0D3F1825AFDFF60089949D /* customComponents */,
 				CF0D3F0425AFDA3E0089949D /* extensions */,
 				CF0D3EC825AFA3920089949D /* AppDelegate.swift */,
@@ -138,6 +151,9 @@
 			isa = PBXGroup;
 			children = (
 				CF0D3F0525AFDA580089949D /* UIColorExtension.swift */,
+				CF1A116425B85E91004D1965 /* ViewControllerTableExtension.swift */,
+				CF1A116925B85FA1004D1965 /* ViewControllerTableDelegateExtension.swift */,
+				CF1A118D25B98693004D1965 /* ImageViewExtension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -146,8 +162,18 @@
 			isa = PBXGroup;
 			children = (
 				CF0D3F1925AFE0230089949D /* RoundButton.swift */,
+				CF1A116E25B86685004D1965 /* ContactCell.swift */,
+				CF1A119A25B99802004D1965 /* Spinner.swift */,
 			);
 			path = customComponents;
+			sourceTree = "<group>";
+		};
+		CF1A118725B9846A004D1965 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A118825B98476004D1965 /* Contact.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,9 +306,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1A119B25B99802004D1965 /* Spinner.swift in Sources */,
+				CF1A118925B98476004D1965 /* Contact.swift in Sources */,
+				CF1A116F25B86685004D1965 /* ContactCell.swift in Sources */,
+				CF1A118E25B98693004D1965 /* ImageViewExtension.swift in Sources */,
 				CF0D3ECD25AFA3920089949D /* ViewController.swift in Sources */,
 				CF0D3EC925AFA3920089949D /* AppDelegate.swift in Sources */,
 				CF0D3ECB25AFA3920089949D /* SceneDelegate.swift in Sources */,
+				CF1A116525B85E91004D1965 /* ViewControllerTableExtension.swift in Sources */,
+				CF1A116A25B85FA1004D1965 /* ViewControllerTableDelegateExtension.swift in Sources */,
 				CF0D3F0625AFDA580089949D /* UIColorExtension.swift in Sources */,
 				CF0D3F1A25AFE0230089949D /* RoundButton.swift in Sources */,
 			);
