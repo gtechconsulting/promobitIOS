@@ -267,6 +267,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail já cadastrado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VI2-Tw-M8z">
+                                <rect key="frame" x="29" y="257" width="365" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="17g-KN-uRS"/>
+                                    <constraint firstAttribute="width" secondItem="VI2-Tw-M8z" secondAttribute="height" multiplier="365:21" id="HMM-R0-tRG"/>
+                                    <constraint firstAttribute="width" constant="365" id="krv-5g-q2S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GvT-ZB-aF5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -282,6 +293,7 @@
                             <constraint firstItem="7dn-T9-q0B" firstAttribute="leading" secondItem="GvT-ZB-aF5" secondAttribute="leading" constant="20" id="PWg-dC-2Lp"/>
                             <constraint firstItem="7dn-T9-q0B" firstAttribute="top" secondItem="nS1-SA-obB" secondAttribute="bottom" constant="30" id="PdG-lI-Nrj"/>
                             <constraint firstItem="o4g-uh-4GU" firstAttribute="top" secondItem="GvT-ZB-aF5" secondAttribute="top" constant="49" id="Yoh-kY-bhs"/>
+                            <constraint firstItem="VI2-Tw-M8z" firstAttribute="leading" secondItem="GvT-ZB-aF5" secondAttribute="leading" constant="29" id="Z0d-x8-xzF"/>
                             <constraint firstItem="nS1-SA-obB" firstAttribute="leading" secondItem="GvT-ZB-aF5" secondAttribute="leading" constant="20" id="ZG2-5M-7KH"/>
                             <constraint firstItem="o4g-uh-4GU" firstAttribute="leading" secondItem="GvT-ZB-aF5" secondAttribute="leading" constant="20" id="ZTZ-uh-DVi"/>
                             <constraint firstItem="GvT-ZB-aF5" firstAttribute="trailing" secondItem="M0j-hL-5ly" secondAttribute="trailing" constant="20" id="bQP-jI-Bql"/>
@@ -293,11 +305,14 @@
                             <constraint firstItem="GvT-ZB-aF5" firstAttribute="trailing" secondItem="nS1-SA-obB" secondAttribute="trailing" constant="20" id="pQm-cA-9VL"/>
                             <constraint firstItem="GvT-ZB-aF5" firstAttribute="trailing" secondItem="AcY-8t-pRN" secondAttribute="trailing" constant="20" id="rcP-RF-8PY"/>
                             <constraint firstItem="GvT-ZB-aF5" firstAttribute="bottom" secondItem="M0j-hL-5ly" secondAttribute="bottom" constant="20" id="tCE-TW-6Ml"/>
+                            <constraint firstItem="VI2-Tw-M8z" firstAttribute="top" secondItem="7dn-T9-q0B" secondAttribute="bottom" constant="2" id="wqI-Hr-m31"/>
+                            <constraint firstItem="GvT-ZB-aF5" firstAttribute="trailing" secondItem="VI2-Tw-M8z" secondAttribute="trailing" constant="20" id="yGf-Uf-JCf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Adicionar contato" id="t6h-2J-6Uh"/>
                     <connections>
                         <outlet property="cancelBtn" destination="pYO-gB-ZHg" id="cgK-eA-Vfo"/>
+                        <outlet property="emailErrorField" destination="VI2-Tw-M8z" id="cvm-oA-ifK"/>
                         <outlet property="emailField" destination="7dn-T9-q0B" id="nr2-zB-cA6"/>
                         <outlet property="empresaField" destination="nS1-SA-obB" id="JHO-iY-uJx"/>
                         <outlet property="nomeField" destination="o4g-uh-4GU" id="11m-6D-Hyh"/>
@@ -310,6 +325,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajU-48-0xA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1859.4202898550725" y="110.86956521739131"/>
+        </scene>
+        <!--SuccessViewController-->
+        <scene sceneID="bL8-ID-EtX">
+            <objects>
+                <viewController storyboardIdentifier="SuccessViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qyd-rK-5q2" userLabel="SuccessViewController" customClass="SuccessViewController" customModule="promobitTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="THw-xh-6Iz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contato Adicionado com sucesso!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUV-MW-w7L">
+                                <rect key="frame" x="20" y="290" width="374" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="RMg-9X-G8x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zk6-2O-GyN">
+                                <rect key="frame" x="20" y="649" width="374" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="U64-13-bFA"/>
+                                </constraints>
+                                <state key="normal" title="VOLTAR"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="vhP-Jo-rji">
+                                <rect key="frame" x="156" y="182" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="MZs-wG-AT9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BTg-SE-Sdb"/>
+                        <color key="backgroundColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="cUV-MW-w7L" firstAttribute="leading" secondItem="Zk6-2O-GyN" secondAttribute="leading" id="0Jy-RT-VmS"/>
+                            <constraint firstItem="vhP-Jo-rji" firstAttribute="top" secondItem="BTg-SE-Sdb" secondAttribute="top" constant="182" id="3kf-n3-qjA"/>
+                            <constraint firstItem="BTg-SE-Sdb" firstAttribute="bottom" secondItem="Zk6-2O-GyN" secondAttribute="bottom" constant="34" id="B0h-JB-Ifx"/>
+                            <constraint firstItem="cUV-MW-w7L" firstAttribute="top" secondItem="vhP-Jo-rji" secondAttribute="bottom" constant="8" id="BO5-K4-YNq"/>
+                            <constraint firstItem="cUV-MW-w7L" firstAttribute="trailing" secondItem="THw-xh-6Iz" secondAttribute="trailingMargin" id="Lex-wK-w5d"/>
+                            <constraint firstItem="cUV-MW-w7L" firstAttribute="leading" secondItem="THw-xh-6Iz" secondAttribute="leadingMargin" id="Ve7-Gf-KTg"/>
+                            <constraint firstItem="vhP-Jo-rji" firstAttribute="centerX" secondItem="cUV-MW-w7L" secondAttribute="centerX" id="bLG-10-M8R"/>
+                            <constraint firstItem="vhP-Jo-rji" firstAttribute="leading" secondItem="BTg-SE-Sdb" secondAttribute="leading" constant="157" id="cyQ-sd-50i"/>
+                            <constraint firstItem="cUV-MW-w7L" firstAttribute="trailing" secondItem="Zk6-2O-GyN" secondAttribute="trailing" id="hYh-d4-R5T"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="voltarBtn" destination="Zk6-2O-GyN" id="qpf-Jx-v8c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ris-xS-xFQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2682.608695652174" y="117.39130434782609"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QXp-DQ-Sef">
@@ -338,8 +417,12 @@
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="sad" width="60" height="60"/>
+        <image name="success" width="48" height="48"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

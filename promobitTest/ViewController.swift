@@ -30,11 +30,10 @@ class ViewController: UIViewController {
         self.contactTable.isHidden = true
         self.noContactsView.isHidden = true
         self.spinnerView.isHidden = true
-        loadContacts()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-            self.contactTable.reloadData()
+        loadContacts()
     }
     
     private func loadContacts() {

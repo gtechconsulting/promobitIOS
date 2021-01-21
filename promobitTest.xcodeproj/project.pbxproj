@@ -26,6 +26,8 @@
 		CF1A11B325B99FF5004D1965 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A11B225B99FF5004D1965 /* CustomTextField.swift */; };
 		CF1A11B825B9A4EE004D1965 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A11B725B9A4EE004D1965 /* UIButtonExtension.swift */; };
 		CF1A11BD25B9A633004D1965 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A11BC25B9A633004D1965 /* AddContactViewController.swift */; };
+		CF1A11C225B9B1DB004D1965 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A11C125B9B1DB004D1965 /* SuccessViewController.swift */; };
+		CF1A11C725B9CA91004D1965 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A11C625B9CA91004D1965 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		CF1A11B225B99FF5004D1965 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		CF1A11B725B9A4EE004D1965 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		CF1A11BC25B9A633004D1965 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
+		CF1A11C125B9B1DB004D1965 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		CF1A11C625B9CA91004D1965 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 				CF0D3ED325AFA3960089949D /* LaunchScreen.storyboard */,
 				CF0D3ED625AFA3960089949D /* Info.plist */,
 				CF1A11BC25B9A633004D1965 /* AddContactViewController.swift */,
+				CF1A11C125B9B1DB004D1965 /* SuccessViewController.swift */,
 			);
 			path = promobitTest;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 				CF1A116925B85FA1004D1965 /* ViewControllerTableDelegateExtension.swift */,
 				CF1A118D25B98693004D1965 /* ImageViewExtension.swift */,
 				CF1A11B725B9A4EE004D1965 /* UIButtonExtension.swift */,
+				CF1A11C625B9CA91004D1965 /* StringExtension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -319,6 +325,7 @@
 				CF1A118925B98476004D1965 /* Contact.swift in Sources */,
 				CF1A116F25B86685004D1965 /* ContactCell.swift in Sources */,
 				CF1A118E25B98693004D1965 /* ImageViewExtension.swift in Sources */,
+				CF1A11C725B9CA91004D1965 /* StringExtension.swift in Sources */,
 				CF0D3ECD25AFA3920089949D /* ViewController.swift in Sources */,
 				CF0D3EC925AFA3920089949D /* AppDelegate.swift in Sources */,
 				CF0D3ECB25AFA3920089949D /* SceneDelegate.swift in Sources */,
@@ -328,6 +335,7 @@
 				CF1A11B325B99FF5004D1965 /* CustomTextField.swift in Sources */,
 				CF1A116A25B85FA1004D1965 /* ViewControllerTableDelegateExtension.swift in Sources */,
 				CF0D3F0625AFDA580089949D /* UIColorExtension.swift in Sources */,
+				CF1A11C225B9B1DB004D1965 /* SuccessViewController.swift in Sources */,
 				CF0D3F1A25AFE0230089949D /* RoundButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
